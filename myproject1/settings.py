@@ -60,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'my_newApp.middleware.RequestLoggingMiddleware',# custom created Middleware
-    'whitenoise.middleware.WhiteNoiseMiddleware'# adding white noise middleware for under free deployment process
+    'whitenoise.middleware.WhiteNoiseMiddleware',# adding white noise middleware for under free deployment process
     'my_newApp.middleware.AdvancedMiddleware',# custom created Middleware
     'my_newApp.middleware.FirstMiddleware',# custom created Middleware
     'my_newApp.middleware.SecondMiddleware',# custom created Middleware
