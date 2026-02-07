@@ -1,0 +1,24 @@
+<h1>One to One Relationship</h1>
+
+{% comment %}
+<p>Username: {{profile.user.username}}</p>
+<p>Bio: {{profile.bio}}</p>
+<p>Location: {{profile.location}}</p>
+{% endcomment %}
+
+{% for user in users %}
+<p>Username: {{user.username}}</p>
+<p>Email: {{user.email}}</p>
+
+{% if user.profiles %}
+
+<p>Bio: {{user.profiles.bio }}</p>
+
+{% else %}
+<p>No profile</p>
+
+{% endif %}
+
+{% empty %}
+<p>No users found</p>
+{% endfor %}

@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>{% block title %}my website{% endblock %} </title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Website Header</h1>
+        <a href="/">Home</a> | <a href="/about/">About</a>
+        {% comment %}
+        <img src="{% static 'myapp/django.jpg' %}" alt="" srcset="">
+        {% endcomment %}
+        <img src="https://kanhasoft.com/blog/wp-content/uploads/2018/07/django.jpg" alt="">
+    </header>
+
+    <main>
+        {% block content %}
+        <p>Welcome to my site!</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MySite</p>
+    </footer>
+    <script src="{% static 'myapp/script.js' %}"></script>
+</body>
+</html>

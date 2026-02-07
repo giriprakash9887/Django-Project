@@ -1,0 +1,39 @@
+<h2>Basic Queries</h2>
+
+<h3>All Books</h3>
+<ul>
+    {% for book in all_books %}
+    <li>
+        {{ book.title }} by {{ book.author.name }} - Rs.{{ book.price }}
+    </li>
+    {% empty %}
+    <li>No Books Found</li>
+    {% endfor %}
+</ul>
+
+<h2>Filter Books</h2>
+<ul>
+    {% for book in filter_books %}
+    <li>
+        {{ book.title }} - Rs.{{ book.price }}
+    </li>
+    {% empty %}
+    <li>No Books Found</li>
+    {% endfor %}
+</ul>
+
+<h2>Excluded Books</h2>
+
+<ul>
+    {% for book in exclude_books %}
+    <li>
+        {{ book.title }} - Rs.{{ book.price }}
+    </li>
+    {% empty %}
+    <li>No Books Found</li>
+    {% endfor %}
+</ul>
+
+<h2>Get Single Book</h2>
+
+<p>{{ get_book.title }} by {{ get_book.author.name }} - Rs.{{ get_book.price }}</p>
